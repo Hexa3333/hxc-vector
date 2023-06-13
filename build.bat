@@ -10,4 +10,4 @@ if "%1"=="clean" (
 mkdir bin
 
 :: Compile the demo
-gcc -Wall demo/demo.c -Iinclude/ -o bin/%demoName%
+gcc -Wall demo/demo.c -I. -o bin/%demoName%
