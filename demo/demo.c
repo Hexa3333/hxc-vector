@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include "vector.h"
+#include "hxc_vector.h"
 #include <math.h>
 
 int main(void)
 {
-    vec3i test1 = { 5, 3, 3 };
+    vec3i test1 = VEC3I_IDENTITY;
     vec3i test2 = { 2, 2, 2 };
 
     vec3i result = vec3i_addr(test1, test2);
