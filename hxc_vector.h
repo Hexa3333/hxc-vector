@@ -1,4 +1,8 @@
+#ifndef HXC_VECTOR_H
+#define HXC_VECTOR_H
+
 #include <stdint.h>
+#include <stdbool.h>
 #include <math.h>
 
 #define HXC_VECTOR_FUNCTION_INLINE inline extern
@@ -411,3 +415,70 @@ HXC_VECTOR_FUNCTION_INLINE float vec3f_distance(vec3f a, vec3f b)
 {
     return sqrt(hxc_sqnf(a.x - b.x) + hxc_sqnf(a.y - b.y) + hxc_sqnf(a.z - b.z));
 }
+
+//////////////////// EQUALITY /////////////////////////
+HXC_VECTOR_FUNCTION_INLINE bool vec2i_eq(vec2i a, vec2i b)
+{
+    if (a.x == b.x && a.y == b.y)
+        return true;
+    else
+        return false;
+}
+
+HXC_VECTOR_FUNCTION_INLINE bool vec2i_eqs(vec2i a, int b)
+{
+    if (a.x == b && a.y == b)
+        return true;
+    else
+        return false;
+}
+
+HXC_VECTOR_FUNCTION_INLINE bool vec2f_eq(vec2i a, vec2i b)
+{
+    if (a.x == b.x && a.y == b.y)
+        return true;
+    else
+        return false;
+}
+
+HXC_VECTOR_FUNCTION_INLINE bool vec2f_eqs(vec2i a, float b)
+{
+    if (a.x == b && a.y == b)
+        return true;
+    else
+        return false;
+}
+
+HXC_VECTOR_FUNCTION_INLINE bool vec3i_eq(vec3i a, vec3i b)
+{
+    if (a.x == b.x && a.y == b.y && a.z == b.z)
+        return true;
+    else
+        return false;
+}
+
+HXC_VECTOR_FUNCTION_INLINE bool vec3i_eqs(vec3i a, int b)
+{
+    if (a.x == b && a.y == b && a.z == b)
+        return true;
+    else
+        return false;
+}
+
+HXC_VECTOR_FUNCTION_INLINE bool vec3f_eq(vec3f a, vec3f b)
+{
+    if (a.x == b.x && a.y == b.y && a.z == b.z)
+        return true;
+    else
+        return false;
+}
+
+HXC_VECTOR_FUNCTION_INLINE bool vec3f_eqs(vec3f a, float b)
+{
+    if (a.x == b && a.y == b && a.z == b)
+        return true;
+    else
+        return false;
+}
+
+#endif // HXC_VECTOR_H
